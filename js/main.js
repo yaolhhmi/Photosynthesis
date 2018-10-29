@@ -19,6 +19,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
 
+
+$(document).ready(function() {
+    $(".navbar-nav > li").click(function() {
+        $(".navbar-nav > li").removeClass('current');
+        $(this).addClass('current');
+    });
+});
+
+
+
 /*$(window).on('resize', function () {
     $('#navbarNav').collapse('hide');
  })*/
