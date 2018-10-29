@@ -62,14 +62,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   padding-top:0.5rem;
   padding-bottom:0.5rem;
   background-color:rgba(181, 208, 252, 0.6);
+  cursor: pointer;
 }
 
-.nav-item:hover, .nav-item:focus{
-  background-color:rgba(33, 140, 255, 0.5);
-}
-/*.nav-link{
-  transition: 0.2s linear;
+/*.nav-item:hover, .nav-item:focus{
+  background-color:rgba(33, 122, 255, 0.5);
 }*/
+
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
