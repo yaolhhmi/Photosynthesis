@@ -5,7 +5,7 @@ html, body {
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden; 
-background-image: url(../assets/paper-texture.jpg);
+background-image: url("../assets/paper-texture.jpg");
 background-repeat:repeat;
 background-size: 400px 400px;
 background-color: #d7d7d7;
@@ -21,6 +21,10 @@ font-size: 1rem;
 body:not(.show-focus-outlines) button:focus,
 body:not(.show-focus-outlines) [tabindex]:focus {
   outline: none; }
+
+#canvas{
+  z-index: 10;
+}
 
 .navbar {
   padding:0;
@@ -61,12 +65,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   justify-content: space-around;
   padding-top:0.5rem;
   padding-bottom:0.5rem;
-  background-color:rgba(181, 208, 252, 0.6);
+  background-color:rgba(86, 176, 255, 0.4);
   cursor: pointer;
 }
 
 .nav-item:hover, .nav-item:focus,.nav-item.current{
-  background-color:rgba(33, 122, 255, 0.5);
+  background-color:rgba(255,194,49,0.8);
 }
 
 .nav-item a{
@@ -74,7 +78,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .nav-item:hover a, .nav-item:focus a, .nav-item.current a{
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(155, 50, 14, 1);
 }
 
 .navbar-brand {
