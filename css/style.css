@@ -22,8 +22,9 @@ body:not(.show-focus-outlines) button:focus,
 body:not(.show-focus-outlines) [tabindex]:focus {
   outline: none; }
 
-#canvas{
+#canvas1{
   z-index: 10;
+  position: relative;
 }
 
 .navbar {
@@ -78,7 +79,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 }
 
 .nav-item:hover a, .nav-item:focus a, .nav-item.current a{
-  color: rgba(155, 50, 14, 1);
+  color: rgb(128, 34, 2);
 }
 
 .navbar-brand {
@@ -117,24 +118,30 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.6)' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.navbar {
-  z-index: 9991; }
-
-.footer, .footer-buttons, .footer-audio {
-  z-index: 9990; }
-
-
-  .footer-buttons {
-    position: fixed;
-    bottom: 15px;
-    right: 15%;
-    width: 5rem;
-    height: 2rem;
-    font-size: 0; }
+.navbar{
+  z-index: 9998; 
+}
+  .footer, .footer-buttons{
+    z-index: 9999; 
+  }
   
-
   
-  .footer-question {
+    .footer-buttons {
+      position: fixed;
+      bottom: 14px;
+      right: 10%;
+      width: 7rem;
+      height: 2rem;
+      font-size: 0; }
+  
+  .question {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+  
+    
+    .footer-question {
     display: inline-block;
     position: relative;
     width: 70%;
@@ -153,7 +160,6 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   
   .footer-question:hover span {
     animation: 0.5s questionAnimation forwards; }
-    
   
   @keyframes questionAnimation {
     0% {
@@ -167,7 +173,10 @@ body:not(.show-focus-outlines) [tabindex]:focus {
       opacity: 0; }
     100% {
       transform: translate(-50%, -50%);
-      opacity: 1; } }
+      opacity: 1; } 
+    }
+
+
 
 .footer {
   position: fixed;
