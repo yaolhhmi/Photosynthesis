@@ -142,11 +142,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   z-index: 9998; 
 }
 
-.dropdown-menu-scroll {
-  max-height:100%;
-  overflow-y:scroll;
-  
+.fixed-top .navbar-collapse {
+  max-height: 250px;
+  overflow-y: auto;
 }
+
+
   .footer, .footer-buttons{
     z-index: 9999; 
   }
