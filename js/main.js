@@ -68,11 +68,12 @@ $(document).ready(function () {
     hideFooter(false);
     var _navheight = $(".navbar").height();
     $(".placeholder").css("padding-top", _navheight);
+    $(".loading-container").css("padding-top", _navheight);
 
     $(window).on('resize', function () {
         hideFooter(false);
         $(".placeholder").css("padding-top", _navheight);
-
+        $(".loading-container").css("padding-top", _navheight);
 
     });
     $(window).on('scroll', hideFooter);
