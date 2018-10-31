@@ -49,9 +49,14 @@ function hideFooter(transition){
 $(document).ready(function () {
     
     hideFooter(false);
+    var _navheight = $(".navbar").height();
+    $(".placeholder").css("padding-top",_navheight);
 
     $(window).on('resize', function(){
         hideFooter(false);
+        $(".placeholder").css("padding-top",_navheight);
+
+        
     });
     $(window).on('scroll', hideFooter);
 
@@ -75,6 +80,22 @@ $(document).ready(function () {
         $('.footer').removeClass('footerHide');
         $('.menuitem').css('visibility', '');
     });
+
+
+    $('.navbar-toggler').on("click", function() {
+        var maxmenuheight = 
+            $(window).innerHeight() - $(".navbar").height();
+        if($('#navbarNav').height()>=maxmenuheight){
+        
+            if ($('.navbar').hasClass("dropdown-menu-scroll")){
+                $('.navbar').removeClass("dropdown-menu-scroll")
+            }
+             else{
+                $('#navbarNav').css("max-height", maxmenuheight);
+                $('.navbar').addClass("dropdown-menu-scroll");
+            }
+        }
+      });
 
 });
 

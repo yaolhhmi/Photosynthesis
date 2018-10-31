@@ -22,17 +22,22 @@ body:not(.show-focus-outlines) button:focus,
 body:not(.show-focus-outlines) [tabindex]:focus {
   outline: none; }
 
+#main{
+  width:100%;
+  height:100%;
+  margin:0 auto;
+}
   #canvas1{
     position:absolute;
     width:100%;
     height:100%;
     margin:0 auto;
+    padding-bottom:15px;
   }
 
 #canvas1 .placeholder{
   z-index:-1000;
   display: block;
-
   max-width: 100%;
   height:auto; 
   max-height: 100%;
@@ -42,6 +47,7 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .navbar {
   padding:0;
+  margin:0;
   background-color: rgba(255,255,255,0.8);
   -webkit-box-shadow: 0px 2px 2px 0px rgba(107, 107, 107, 0.42);
   -moz-box-shadow: 0px 2px 2px 0px rgba(107, 107, 107, 0.42);
@@ -52,12 +58,13 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   Height: 100%;
   font-size: 22px;
   font-weight: 500;
-  padding:0.5rem;
+  padding:5px;
   padding-left:1rem;
   margin-right: 0.4rem;
   transition: 0.2s linear;
 
 }
+
 
 
 .navbar-nav{
@@ -66,10 +73,11 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
   width: 100%;
   text-align:center;
-
   justify-content: space-around;
   /*do not set height here because it affects the css animation of collapsing*/
 }
+
+.stay-open {display:block !important;}
 
 .nav-item{
   white-space: nowrap;
@@ -77,8 +85,8 @@ body:not(.show-focus-outlines) [tabindex]:focus {
   text-align:center;
   vertical-align:middle;
   justify-content: space-around;
-  padding-top:0.5rem;
-  padding-bottom:0.5rem;
+  padding-top:5px;
+  padding-bottom:5px;
   background-color:rgba(86, 176, 255, 0.4);
   cursor: pointer;
 }
@@ -132,6 +140,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 .navbar{
   z-index: 9998; 
+}
+
+.dropdown-menu-scroll {
+  max-height:100%;
+  overflow-y:scroll;
+  
 }
   .footer, .footer-buttons{
     z-index: 9999; 
