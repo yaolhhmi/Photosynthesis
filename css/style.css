@@ -2,14 +2,114 @@ html, body {
   font-size: 100%;
   -webkit-overflow-scrolling: touch; }
 
+@font-face {
+  font-family: HelveticaNeueLTStd-BdCn;
+  src: url(../fonts/HelveticaNeue/HelveticaNeueLTStd-BdCn.otf);
+}
+
+@font-face {
+  font-family: HelveticaNeueLTStd-Roman;
+  src: url(../fonts/HelveticaNeue/HelveticaNeueLTStd-Roman.otf);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden; 
-background-image: url("../assets/paper-texture.jpg");
+background-image: url(../assets/paper-texture.jpg);
 background-repeat:repeat;
 background-size: 400px 400px;
 background-color: #d7d7d7;
 font-size: 1rem;
+}
+.loading-title{
+  position:absolute;
+  width:100%;
+  display:block;
+  text-align:center;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-40%);
+  z-index:900;
+}
+.loading-title h1{
+  font-family: HelveticaNeueLTStd-BdCn, sans-serif;
+  position:relative;
+  display:block;
+  text-align: center;
+  z-index:900;
+  font-size: 450%;
+  text-shadow: 2px 2px 2px #ffffff;
+  opacity:0.95;
+}
+.loading-title h4{
+  font-family:HelveticaNeueLTStd-Roman, sans-serif;
+  font-size:150%;
+  line-height:120%;
+  position:relative;
+  display:block;
+  text-align: center;
+  z-index:900;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+
+.loading-title button{
+  background-color: #7CB729;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 20px;
+  margin: 18px 2px;
+  cursor: pointer;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-weight:400;
+  border-radius: 8px;
+
+
+  -webkit-animation: neon4 1s ease-in-out infinite alternate;
+  -moz-animation: neon4 1s ease-in-out infinite alternate;
+  animation: neon4 1s ease-in-out infinite alternate;
+  transition: 0.2s linear;
+}
+
+@keyframes neon4 {
+from {
+  box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #fff, 0 0 4px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 10px #fff;}
+to {
+  box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff, 0 0 28px #8ac341, 0 0 32px #8ac341, 0 0 40px #47AF1C;
+}
+}
+
+@-webkit-keyframes neon4 {
+from {
+  box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #fff, 0 0 4px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 10px #fff;}
+to {
+  box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff, 0 0 28px #8ac341, 0 0 32px #8ac341, 0 0 40px #47AF1C;
+}
+}
+
+@-moz-keyframes neon4 {
+from {
+  box-shadow: 0 0 1px #000, 0 0 2px #000, 0 0 3px #fff, 0 0 4px #fff, 0 0 7px #fff, 0 0 8px #fff, 0 0 10px #fff;}
+to {
+  box-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 16px #fff, 0 0 28px #8ac341, 0 0 32px #8ac341, 0 0 40px #47AF1C;
+}
+}
+
+.loading-title button:hover{
+  background-color:#47AF1C;
+  cursor: pointer;
+    
+  -webkit-animation: 0;
+  animation: 0;
+  transition: 0.2s linear;
+
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(107, 107, 107, 1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(107, 107, 107, 1);
+  box-shadow: 0px 2px 2px 0px rgba(107, 107, 107, 1);
 }
 
 .show-focus-outlines button:focus,
@@ -301,12 +401,12 @@ body:not(.show-focus-outlines) [tabindex]:focus {
 
 }
 
-.loading-title{
+/*.loading-title{
   position:absolute;
   display:flex;
   width:40%;
   top:37%;
-}
+}*/
 
 .loading-img{
 position:absolute;
@@ -314,12 +414,11 @@ display:flex;
 max-height: 80%;
 width:auto;
 z-index:-1000;
+opacity: 0.35;
 }
 
 @media screen and (max-width: 1920px){
-  .loading-title{
-    width:37%;
-  }
+
 }
 
 
@@ -332,14 +431,12 @@ z-index:-1000;
     .navbar-brand{
       font-size: 19px;
     }
-    .loading-title{
-      width:40%;
-    }
+
   }
 
 @media screen and (max-width: 991.98px) {
   html, body {
-    font-size: 70%; } 
+    font-size: 80%; } 
   .menu {
     padding: 1rem 0; }
   .menuitem {
@@ -352,28 +449,22 @@ z-index:-1000;
     width: 12rem; }
   .footer .link {
     font-size: 1.25rem; }
-    .loading-title{
-      width:50%;
-    }
+
   }
 
 @media (max-width: 767.98px){
-  .loading-title{
-    width:55%;
-  }
+
+
 }
 
 
   @media (max-width: 575.98px){
-    .loading-title{
-      width:60%;
-    }
+
+
   }
 
   @media (max-width: 414px){
-    .loading-title{
-      width:80%;
-    }
+
   }
 
 @media screen and (orientation: portrait) {
