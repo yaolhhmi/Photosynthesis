@@ -26,9 +26,9 @@ font-size: 1rem;
   width:100%;
   display:block;
   text-align:center;
-  top: 40%;
+  top: 45%;
   left: 50%;
-  transform: translateX(-50%) translateY(-40%);
+  transform: translateX(-50%) translateY(-45%);
   z-index:900;
 }
 .loading-title h1{
