@@ -35,6 +35,11 @@ function _classCallCheck(instance, Constructor) {
     
 }();*/
 
+var app = new Vue({
+    el: '#vue',
+    data: siteCopy
+});
+
 function hideFooter(transition) {
     if (transition) {
         $('.footer').addClass('footer-transition');
@@ -79,7 +84,7 @@ $(document).ready(function () {
     $(window).on('scroll', hideFooter);
 
     $(window).click(function (event) {
-        if (!$(event.target).closest(".footer-buttons").length) {
+        if ((!$(event.target).closest(".footer-buttons").length)&&(!$(event.target).closest(".footer").length)) {
             if (!($(".footer-buttons").hasClass("footerHide"))) {
                 hideFooter(true);
             }
@@ -92,14 +97,45 @@ $(document).ready(function () {
     });
 
 
-
     $(".footer-buttons").click(function showFooter() {
         $('.footer').addClass('footer-transition');
         $('.footer').removeClass('footerHide');
         $('.menuitem').css('visibility', '');
     });
-
     
+    
+    function showModal2() {
+        hideFooter(true);
+        var modal2 = $('#modal2');
+        modal2.modal('show');
+    }
+
+    function modalClose2(){
+        if (!$('#modal2').is(':visible')) {
+            return;
+        }
+        var modal2 = $('#modal2');
+        modal2.modal('hide');
+    }
+
+    $('.modal-close2').bind('click', modalClose2);
+
+    $('.about').bind('click', function(){
+        $('.modal2-box').html($('.modal2-about').html());
+        showModal2();
+    });
+    
+    $('.educator-resources').bind('click', function(){
+        $('.modal2-box').html($('.modal2-educator-resources').html());
+        showModal2();
+    });
+
+    $('.help').bind('click', function(){
+        $('.modal2-box').html($('.modal2-help').html());
+        showModal2();
+    });
+
+
 
 });
 

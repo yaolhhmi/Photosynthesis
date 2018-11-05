@@ -27,101 +27,192 @@
         })(window, document, 'script', 'dataLayer', 'GTM-WRC3MJ');</script>
     End Google Tag Manager -->
 
-    <a href="#main " class="sr-only sr-only-focusable">Skip to main content</a>
+    <div id="vue">
+        <!--Menu bar-->
+        <a href="#main " class="sr-only sr-only-focusable">Skip to main content</a>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="index.html">
-            <img src="assets/tree.png" width="46" height="35" class="d-inline-block align-middle" alt="">Photosynthesis
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav text-center align-items-center ">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Chemical Process</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Plant Cells</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Chloroplasts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Light Reactions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Calvin Cycle</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Biosynthesis</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/tree.png" width="46" height="35" class="d-inline-block align-middle" alt="">Photosynthesis
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-center align-items-center ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Overview<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Chemical Process</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Plant Cells</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Chloroplasts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Light Reactions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Calvin Cycle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Biosynthesis</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <main id="main" tabindex="-1">
+        <!--center component-->
+        <main id="main" class="non-modal" tabindex="-1">
 
             <div class="loading">
                 <div class="loading-container">
-                    <!--img src="assets/loading_title.svg" class="loading-title" alt="Photosynthesis"--> 
+                    <!--img src="assets/loading_title.svg" class="loading-title" alt="Photosynthesis"-->
 
 
                     <img src="assets/big_tree.png" class="loading-img" alt="Responsive image">
-                    
+
                     <a href="#" class="button button-more"></a>
                 </div>
             </div>
             <div class="loading-title">
-                    <h1 >Photosynthesis</h1>
-                    <h4>This is an introduction about this interactive.<br>You can learn about photosynthesis here. </h4>
-                    <button>Start</button>
+                <h1>{{landing.title}}</h1>
+                <h4 v-html="landing.description">{{landing.description}}</h4>
+                <button>{{landing.button}}</button>
             </div>
             <!--div id="canvas1">
                 <img src="assets/big_tree.jpg" class="placeholder center" alt="Responsive image">
             </div>
             <div class="container main-container"></div-->
 
-    </main>
+        </main>
 
-    <div class="modals displaynone">
+        <!--more info pages-->
+        <div class="displaynone">
+            <div class="modal2-about">
+                <div class="modal2-subheader">
+                    <center>{{ about.title }}</center>
+                </div>
 
-    </div>
+                <div class="modal2-text" v-html="about.description">
+                    {{ about.description }}
+                </div>
+                <div class="modal2-subsubheader">
+                    <center>{{ about.credits }}</center>
+                </div>
+                <center>
+                    <div class="modal2-text" v-html="about.credits_full">
+                        {{ about.credits_full }}
+                    </div>
+                </center>
+                <div class="modal2-subsubheader">
+                    <!-- <center>Site map</center> -->
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
 
-    <div class="footer-buttons" role="button">
-        <div tabindex="1" class="footer-question"><span class="question">?</span></div>
-    </div>
-    </main>
+            </div>
 
-    <div class="footer" role="contentinfo">
-        <div class="menu row">
-            <div class="col-md"></div>
-            <div class="menuitem col-md align-self-center">
-                <span tabindex="1" class="link about">About</span>
+            <div class="modal2-educator-resources">
+                <div class="modal2-subheader">
+                    <center>{{ educator_resources.title }}</center>
+                </div>
+                <div class="modal2-text" v-html="educator_resources.description">
+                    <br />
+                    <center>{{ educator_resources.description }}</center>
+                </div>
             </div>
-            <div class="menuitem col-md align-self-center">
-                <span tabindex="1" class="link educator-resources">Educator Resources</span>
+
+            <div class="modal2-help">
+                <div class="modal2-subheader">
+                    <center>{{ help.title }}</center>
+                </div>
+                <div class="modal2-text" v-html="help.description">
+                    {{ help.description }}
+                </div>
+                <div class="modal2-subsubheader">
+                    <center>{{ help.feedback }}</center>
+                </div>
+                <center>
+                    <div class="modal2-text">
+                        <span v-html="help.feedback_full">{{ help.feedback_full }}</span>
+                        <a tabindex="1" class="link" href="mailto:biointeractive@hhmi.org?Subject=Crispr-CAS9 Interactive Feedback"
+                            target="_top">biointeractive@hhmi.org</a>
+                    </div>
+                </center>
             </div>
-            <div class="menuitem col-md align-self-center">
-                <span tabindex="1" class="link help">Help</span>
-            </div>
-            <div class="menuitem col-md align-self-center">
-                <a class="link logo" href="https://www.hhmi.org/biointeractive" target="_blank">
-                    <img class="footer-logo" alt="Goto BioInteractive" src="assets/biointeractive-logo.svg">
-                </a>
-            </div>
-            <div class="col-md"></div>
         </div>
+
+        <!-- Modal 2 -->
+        <div class="modal" id="modal2" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+            aria-labelledby="modal2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog2" role="document">
+                <div class="modal-content modal-content2">
+                    <div class="modal-body">
+
+                        <div class="back-gradient"></div>
+                        <div class="container modal2-container">
+                            <div class="row">
+                                <div tabindex="1" class="col modal2-box">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div tabindex="1" class="modal-close-container modal-close2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.89 50.89" class="modal-close-icon">
+                                <g class="back-g">
+                                    <circle cx="25.45" cy="25.45" r="25.45" style="fill:#D84178;" />
+                                    <polyline points="32.1 13.42 17.92 25.14 32.83 37.47" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;" />
+                                </g>
+                            </svg>
+
+                            <span class="modal-close-text modal-close-text2">back</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--footer bar and button-->
+        <div class="footer-buttons" role="button">
+            <div tabindex="1" class="footer-question"><span class="question">?</span></div>
+        </div>
+
+        <div class="footer" role="contentinfo">
+            <div class="menu row">
+                <div class="col-md"></div>
+                <div class="menuitem col-md align-self-center">
+                    <span tabindex="1" class="link about">About</span>
+                </div>
+                <div class="menuitem col-md align-self-center">
+                    <span tabindex="1" class="link educator-resources">Educator Resources</span>
+                </div>
+                <div class="menuitem col-md align-self-center">
+                    <span tabindex="1" class="link help">Help</span>
+                </div>
+                <div class="menuitem col-md align-self-center">
+                    <a class="link logo" href="https://www.hhmi.org/biointeractive" target="_blank">
+                        <img class="footer-logo" alt="Goto BioInteractive" src="assets/biointeractive-logo.svg">
+                    </a>
+                </div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+
     </div>
-    
 
 
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="js/vendor/vue.js"></script>
+    <script src="js/copy.js"></script>
     <script src="js/main.js"></script>
 
     <!--<script>

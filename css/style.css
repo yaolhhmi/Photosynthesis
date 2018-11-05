@@ -2,6 +2,9 @@ html, body {
   font-size: 100%;
   -webkit-overflow-scrolling: touch; }
 
+#vue {
+    font-size: 1rem; }
+
 @font-face {
   font-family: HelveticaNeueLTStd-BdCn;
   src: url(../fonts/HelveticaNeue/HelveticaNeueLTStd-BdCn.otf);
@@ -417,6 +420,82 @@ z-index:-1000;
 opacity: 0.35;
 }
 
+.non-modal {
+  transition: filter 1s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.displaynone {
+  display: none; }
+
+#modal2 {
+  z-index: 99999;
+  padding-left: 0 !important;
+}
+
+.modal2-container {
+  padding-top: 12vh; 
+}
+
+.modal-content2 {
+    background-color: #ffffff;
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+    border: 0px; }
+
+.modal-close-container {
+  position: relative; }
+
+.modal-close2 {
+  cursor: pointer;
+  transition: 0.2s linear;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem; }
+
+.modal-close-text {
+  transition: 0.2s linear;
+  transform: translate3d(0, 0, 0);
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 7px #444444;
+  margin-left: 5px;
+  font-weight: 300; }
+
+.modal-close-text2 {
+  color: #555555;
+  text-shadow: 1px 1px 10px #cccccc; }
+
+.modal-dialog2 .modal-body {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: auto; }
+
+.modal-dialog2{
+  width: 100%;
+  height: 100%;
+  right:0;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-body {
+  padding: 0 0.94rem; }
+
+.modal2-subheader {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #222222; }
+
+.modal2-subsubheader {
+  color: #222222;
+  font-size: 1.75rem;
+  font-weight: 300; }
+
+.modal2-text {
+  font-weight: 400;
+  color: #222222;
+  margin-bottom: 1.25rem; }
+  
 @media screen and (max-width: 1920px){
 
 }
